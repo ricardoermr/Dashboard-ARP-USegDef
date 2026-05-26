@@ -483,7 +483,7 @@ footer strong{color:var(--fab-yellow)}
 <div class="subheader">
   <div class="subheader-left">
     <span class="live-dot"></span>
-    <span>USEGDEF · Sistema de Gestão ARP · Dados Restritos · COMAER</span>
+    <span>USEGDEF · Gestão de ARP · Dados Restritos · COMAER</span>
   </div>
   <div class="subheader-right">
     <span>29 USEGDEF monitoradas</span>
@@ -510,11 +510,11 @@ footer strong{color:var(--fab-yellow)}
 <!-- EXPORT BAR -->
 <div id="export-bar">
   <button id="btn-pdf" onclick="gerarPDF()" title="Exportar PDF">&#128438; Exportar PDF</button>
-  <span class="pdf-hint">PDF gerado pelo servidor · A4 paisagem · 4 páginas</span>
+  <span class="pdf-hint">Clique para gerar um PDF do Dashboard</span>
 </div>
 
 <main>
-  <div class="sec">Indicadores Gerais — Frota</div>
+  <div class="sec">Indicadores Gerais de ARP</div>
   <div class="kpi-grid">
     <div class="kpi" id="kpi-total" style="cursor:pointer" onclick="drawerCardArp(function(){return true;},'Todas as ARPs',null)"><div class="kpi-icon">🛸</div><div class="kpi-num" id="kv-total">95</div><div class="kpi-lbl">Total de ARPs</div><div class="kpi-sub">Todos os modelos</div></div>
     <div class="kpi verde" id="kpi-disp" style="cursor:pointer" onclick="drawerCardArp(function(r){return r[5]==='Disp';},'ARPs Disponíveis',null)"><div class="kpi-icon">✅</div><div class="kpi-num">93</div><div class="kpi-lbl">Disponíveis</div><div class="kpi-sub">97.9% da frota</div></div>
@@ -528,7 +528,7 @@ footer strong{color:var(--fab-yellow)}
     <div class="kpi vermelha" style="cursor:pointer" onclick="drawerCardModelo('Matrice 30T',true)"><div class="kpi-icon">📦</div><div class="kpi-num">27</div><div class="kpi-lbl">Matrice 30T faltantes</div><div class="kpi-sub">6.9% de conformidade</div></div>
   </div>
 
-  <div class="sec">Indicadores — Operadores de ARP</div>
+  <div class="sec">Indicadores de Operadores de ARP</div>
   <div class="kpi-grid">
     <div class="kpi roxo" style="cursor:pointer" onclick="drawerCardOp(function(){return true;},'Operadores Habilitados',null)"><div class="kpi-icon">👨‍✈️</div><div class="kpi-num">108</div><div class="kpi-lbl">Operadores habilitados</div><div class="kpi-sub">108 operadores cadastrados</div></div>
     <div class="kpi verde" style="cursor:pointer" onclick="drawerCardOp(function(r){return r[5]==='COMARP';},'Formados pelo COMARP',null)"><div class="kpi-icon">🎓</div><div class="kpi-num">74</div><div class="kpi-lbl">Formados pelo COMARP</div><div class="kpi-sub">68.5% dos operadores</div></div>
@@ -536,7 +536,7 @@ footer strong{color:var(--fab-yellow)}
     <div class="kpi laranja" style="cursor:pointer" onclick="drawerCardUsegSemOp()"><div class="kpi-icon">🏛️</div><div class="kpi-num">3</div><div class="kpi-lbl">USEGDEF sem operador</div><div class="kpi-sub">GSD-BV · GSD-CC · GSD-ST</div></div>
   </div>
 
-  <div class="sec">Capacidade de Operação · Segurança de Voo por USEGDEF</div>
+  <div class="sec">Indicadores de Capacidade de Operação e Segurança de Voo</div>
   <div class="sv-kpi-grid">
     <div class="sv-kpi verde" style="cursor:pointer" onclick="drawerSegvoo(1,'CAOP c/ Órgão ATS')"><div class="sv-kpi-title">CAOP c/ Órgão ATS</div><div class="sv-kpi-num">8</div><div class="sv-kpi-bar"><div class="sv-kpi-fill" style="width:28%;background:var(--green)"></div></div><div class="sv-kpi-sub">28% das USEGDEF · 21 sem CAOP</div></div>
     <div class="sv-kpi azul" style="cursor:pointer" onclick="drawerSegvoo(2,'CAOP Voo Concomitante')"><div class="sv-kpi-title">CAOP Voo Concomitante</div><div class="sv-kpi-num">4</div><div class="sv-kpi-bar"><div class="sv-kpi-fill" style="width:14%;background:var(--fab-blue-mid)"></div></div><div class="sv-kpi-sub">14% das USEGDEF · 25 sem autorização</div></div>
@@ -544,7 +544,7 @@ footer strong{color:var(--fab-yellow)}
     <div class="sv-kpi roxo" style="cursor:pointer" onclick="drawerSegvoo(4,'Integração Imagem → CVO')"><div class="sv-kpi-title">Integração Imagem → CVO</div><div class="sv-kpi-num">5</div><div class="sv-kpi-bar"><div class="sv-kpi-fill" style="width:17%;background:#7C3AED"></div></div><div class="sv-kpi-sub">17% das USEGDEF · 24 sem integração</div></div>
   </div>
 
-  <div class="sec">Conformidade com Meta · 2× Mavic 3T + 1× Matrice 30T por USEGDEF</div>
+  <div class="sec">Conformidade com a Meta · 2× Mavic 3T + 1× Matrice 30T por USEGDEF</div>
   <div class="speed-row">
     <div class="speed-big laranja">
       <div class="speed-big-title">Conformidade</div>
@@ -617,12 +617,12 @@ footer strong{color:var(--fab-yellow)}
   <div class="charts2">
     <div class="ccard">
       <h3>Operadores por USegDef</h3>
-      <div class="chart-sub">Quantidade de operadores habilitados</div>
+      <div class="chart-sub">Clique para filtrar por USegDef</div>
       <div class="chart-area" id="chart-op-useg" style="height:290px"></div>
     </div>
     <div class="ccard">
-      <h3>Posto/Graduação</h3>
-      <div class="chart-sub">Clique para filtrar por operador</div>
+      <h3>Posto/Graduação dos Operadores</h3>
+      <div class="chart-sub">Clique para filtrar por Post/Grad</div>
       <div class="chart-area" id="chart-postos" style="height:200px;display:flex;align-items:center;justify-content:center"></div>
       <div class="chart-legend" id="legend-postos"></div>
     </div>
@@ -670,7 +670,7 @@ footer strong{color:var(--fab-yellow)}
       </div>
     </div>
     <div class="sgauge-card cvo">
-      <div class="sgauge-title">Integração Img → CVO</div>
+      <div class="sgauge-title">Integração Imagens no CVO</div>
       <div class="sgauge-subtitle">Imagens integradas à Central de Vigilância</div>
       <div class="sgauge-svg-wrap"><svg id="sg-cvo" viewBox="0 0 160 86"></svg></div>
       <div class="sgauge-pct" id="sg-cvo-pct">21%</div>
@@ -710,7 +710,7 @@ footer strong{color:var(--fab-yellow)}
   </div>
 
   <!-- TABELA OPERADORES -->
-  </div><div id="sec-op"><div class="sec">Operadores de ARP por USegDef</div>
+  </div><div id="sec-op"><div class="sec">Detalhamento de Operadores de ARP por USegDef</div>
   <div class="tcard">
     <div class="filtros">
       <label>Busca:</label>
@@ -753,7 +753,7 @@ footer strong{color:var(--fab-yellow)}
   </div>
 
   <!-- TABELA SEGVOO -->
-  </div><div id="sec-sv"><div class="sec">Capacidade de Operação — Segurança de Voo</div>
+  </div><div id="sec-sv"><div class="sec">Detalhamento de Capacidade de Operação e Segurança de Voo</div>
   <div class="tcard">
     <div class="filtros">
       <label>Busca:</label>
